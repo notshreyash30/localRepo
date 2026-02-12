@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Career Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #0d47a1; /* Deep Blue from Hero */
+            --accent-orange: #ff9800; /* CTA Orange */
+            --light-bg: #f8f9fa;
+            --dark-footer: #001f3f;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Custom Buttons */
+        .btn-orange {
+            background-color: var(--accent-orange);
+            color: white;
+            font-weight: 600;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+        }
+        .btn-orange:hover {
+            background-color: #e68900;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+        }
+        .hero-img-container {
+            position: relative;
+        }
+
+        /* Logo Strip */
+        .logo-strip img {
+            height: 40px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: 0.3s;
+        }
+        .logo-strip img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        /* Course Cards */
+        .category-card {
+            background: #e3f2fd;
+            border: none;
+            transition: transform 0.3s;
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+            background: #bbdefb;
+        }
+        .category-icon {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        /* Featured Section */
+        .featured-bg {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 60px 0;
+        }
+        .course-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .course-badge {
+            background-color: var(--accent-orange);
+            color: white;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+
+        /* Stats */
+        .stat-item h3 {
+            font-weight: 700;
+            font-size: 2.5rem;
+        }
+
+        /* Mentors */
+        .mentor-card img {
+            border-radius: 10px;
+            object-fit: cover;
+            height: 250px;
+            width: 100%;
+        }
+
+        /* Testimonial */
+        .testimonial-section {
+            background-color: var(--primary-blue);
+            color: white;
+            border-radius: 20px;
+            margin: 50px auto;
+        }
+        .testimonial-card {
+            background: white;
+            color: #333;
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-footer);
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+        footer h5 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+        footer a:hover {
+            color: var(--accent-orange);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">FINANCE<span style="color:var(--accent-orange)">MONK</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Workshops</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                </ul>
+                <div>
+                    <a href="#" class="btn btn-outline-primary me-2">Log In</a>
+                    <a href="#" class="btn btn-orange">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h1 class="display-4 fw-bold mb-3">Skyrocket Your Finance Career</h1>
+                    <p class="lead mb-4 opacity-75">Learn from industry experts and get placed in top companies. Join the community of finance enthusiasts.</p>
+                    <a href="#" class="btn btn-orange btn-lg shadow">Start Learning</a>
+                </div>
+                <div class="col-lg-6 text-center hero-img-container">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Finance Professional" class="img-fluid rounded-circle shadow-lg" style="border: 5px solid rgba(255,255,255,0.2);">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="py-4 bg-light">
+        <div class="container">
+            <p class="text-center text-muted mb-3 small">OUR ALUMNI WORK AT</p>
+            <div class="d-flex justify-content-between flex-wrap align-items-center logo-strip gap-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/KPMG_logo.svg" alt="KPMG">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Accenture.svg/2560px-Accenture.svg.png" alt="Accenture">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg" alt="Infosys">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg" alt="Wipro">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tata_Consultancy_Services_Logo.svg/2560px-Tata_Consultancy_Services_Logo.svg.png" alt="TCS">
+            </div>
+        </div>
+    </div>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="img-fluid rounded shadow w-75">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" class="img-fluid rounded shadow position-absolute bottom-0 end-0 border border-white border-5" style="width: 50%; margin-bottom: -20px;">
+                    </div>
+                </div>
+                <div class="col-lg-6 offset-lg-1">
+                    <h5 class="text-warning fw-bold">THE PATHWAY</h5>
+                    <h2 class="fw-bold mb-4">Achieve Your Goals With GA MONK</h2>
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-success me-3 fa-lg"></i> <span>Learn Practical Financial Skills</span></li>
+                        <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-success me-3 fa-lg"></i> <span>1:1 Mentorship from Experts</span></li>
+                        <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-success me-3 fa-lg"></i> <span>Placement Assistance Guaranteed</span></li>
+                        <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-success me-3 fa-lg"></i> <span>Certified Premium Courses</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Explore Course Categories</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <i class="fas fa-chart-line category-icon"></i>
+                        <h5>Financial Modeling</h5>
+                        <p class="small text-muted">Valuation, Excel & More</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <i class="fas fa-briefcase category-icon"></i>
+                        <h5>Investment Banking</h5>
+                        <p class="small text-muted">M&A, LBO & Pitchbooks</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <i class="fas fa-search-dollar category-icon"></i>
+                        <h5>Equity Research</h5>
+                        <p class="small text-muted">Stock Analysis & Reports</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <i class="fas fa-file-invoice-dollar category-icon"></i>
+                        <h5>CFA Training</h5>
+                        <p class="small text-muted">Level 1 & 2 Prep</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <i class="fas fa-chart-pie category-icon"></i>
+                        <h5>Risk Management</h5>
+                        <p class="small text-muted">FRM & Market Risk</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <i class="fas fa-user-tie category-icon"></i>
+                        <h5>Placement Prep</h5>
+                        <p class="small text-muted">Resume & Mock Interviews</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-bg">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-4">
+                <div>
+                    <h5 class="text-warning">TOP RATED</h5>
+                    <h2 class="fw-bold">Featured Courses</h2>
+                </div>
+                <a href="#" class="btn btn-outline-light btn-sm">View All</a>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card course-card h-100">
+                        <div class="position-relative">
+                            <span class="course-badge">Best Seller</span>
+                            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Course">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between small text-muted mb-2">
+                                <span><i class="fas fa-book"></i> 12 Lessons</span>
+                                <span><i class="fas fa-star text-warning"></i> 4.8</span>
+                            </div>
+                            <h5 class="card-title fw-bold">Complete Financial Analyst</h5>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="fw-bold text-primary">$49.99</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card course-card h-100">
+                        <div class="position-relative">
+                            <span class="course-badge">New</span>
+                            <img src="https://images.unsplash.com/photo-1543286386-713df548e9cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Course">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between small text-muted mb-2">
+                                <span><i class="fas fa-book"></i> 8 Lessons</span>
+                                <span><i class="fas fa-star text-warning"></i> 4.5</span>
+                            </div>
+                            <h5 class="card-title fw-bold">Investment Banking 101</h5>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="fw-bold text-primary">$59.99</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-4">
+                    <div class="card course-card h-100">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Course">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between small text-muted mb-2">
+                                <span><i class="fas fa-book"></i> 20 Lessons</span>
+                                <span><i class="fas fa-star text-warning"></i> 4.9</span>
+                            </div>
+                            <h5 class="card-title fw-bold">Forex Trading Masterclass</h5>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="fw-bold text-primary">$39.99</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container text-center">
+            <div class="row g-4">
+                <div class="col-md-3 stat-item">
+                    <h3 class="text-primary">2.7+ L</h3>
+                    <p class="text-muted">Total Learners</p>
+                </div>
+                <div class="col-md-3 stat-item">
+                    <h3 class="text-primary">1:1</h3>
+                    <p class="text-muted">Mentorship</p>
+                </div>
+                <div class="col-md-3 stat-item">
+                    <h3 class="text-primary">500+</h3>
+                    <p class="text-muted">Hiring Partners</p>
+                </div>
+                <div class="col-md-3 stat-item">
+                    <h3 class="text-primary">100+</h3>
+                    <p class="text-muted">Live Workshops</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="d-flex justify-content-between mb-4">
+                <h2 class="fw-bold">Meet Your Mentors</h2>
+                <a href="#" class="btn btn-orange">View All</a>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="mentor-card bg-white p-2 rounded shadow-sm text-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mentor">
+                        <h5 class="mt-3 mb-0 fw-bold">John Doe</h5>
+                        <p class="text-muted small">CFA, Goldman Sachs</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="mentor-card bg-white p-2 rounded shadow-sm text-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Mentor">
+                        <h5 class="mt-3 mb-0 fw-bold">Sarah Smith</h5>
+                        <p class="text-muted small">VP, JP Morgan</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="mentor-card bg-white p-2 rounded shadow-sm text-center">
+                        <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Mentor">
+                        <h5 class="mt-3 mb-0 fw-bold">Mike Ross</h5>
+                        <p class="text-muted small">Associate, Morgan Stanley</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="mentor-card bg-white p-2 rounded shadow-sm text-center">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Mentor">
+                        <h5 class="mt-3 mb-0 fw-bold">David Lee</h5>
+                        <p class="text-muted small">Head of Risk, HSBC</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <div class="testimonial-section p-5">
+            <div class="row align-items-center">
+                <div class="col-md-5">
+                    <h5 class="text-warning">TESTIMONIALS</h5>
+                    <h2 class="fw-bold">What Our Students Have to Say...</h2>
+                    <p class="opacity-75">Hear from our alumni who have successfully transitioned into high-paying finance careers.</p>
+                </div>
+                <div class="col-md-6 offset-md-1">
+                    <div class="testimonial-card shadow">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" class="rounded-circle me-3" width="50" height="50">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Alice Williams</h6>
+                                <small class="text-muted">Analyst at Deloitte</small>
+                            </div>
+                        </div>
+                        <p class="fst-italic">"The practical approach to financial modeling helped me crack my interview in the first go. Highly recommended!"</p>
+                        <div class="text-warning">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between mb-4">
+                <h2 class="fw-bold">Recent Blogs</h2>
+                <a href="#" class="btn btn-orange btn-sm">Read All</a>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card bg-dark text-white border-0 h-100">
+                        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img opacity-50" style="height: 300px; object-fit: cover;">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end">
+                            <h5 class="card-title fw-bold">Mentorship Matters</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-dark text-white border-0 h-100">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img opacity-50" style="height: 300px; object-fit: cover;">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end">
+                            <h5 class="card-title fw-bold">Placement Strategies</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-dark text-white border-0 h-100">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img opacity-50" style="height: 300px; object-fit: cover;">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end">
+                            <h5 class="card-title fw-bold">Upskilling for 2024</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <h5 class="fw-bold">FINANCE<span style="color:var(--accent-orange)">MONK</span></h5>
+                    <p>The ultimate platform to kickstart your career in finance with industry-relevant skills.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <i class="fab fa-facebook fa-lg"></i>
+                        <i class="fab fa-twitter fa-lg"></i>
+                        <i class="fab fa-linkedin fa-lg"></i>
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h5>Quick Links</h5>
+                    <a href="#">About Us</a>
+                    <a href="#">Courses</a>
+                    <a href="#">Mentors</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="col-md-2">
+                    <h5>Support</h5>
+                    <a href="#">FAQs</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Sitemap</a>
+                </div>
+                <div class="col-md-4">
+                    <h5>Subscribe to Newsletter</h5>
+                    <form class="d-flex mt-3">
+                        <input class="form-control me-2" type="email" placeholder="Email Address">
+                        <button class="btn btn-primary" type="submit">Join</button>
+                    </form>
+                    <div class="mt-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" height="40">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" height="40">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 pt-3 border-top border-secondary">
+                <small>&copy; 2024 Finance Monk. All Rights Reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
